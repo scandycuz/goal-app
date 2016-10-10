@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def login(user)
-    session[:sesion_token] = user.reset_token!
+    session[:session_token] = user.reset_token!
     @current_user = user
   end
 

@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<% if logged_in? %>
+  <%= link_to "Sign Out", session_url, method: :delete %>
+  <%= current_user.username %>
+<% end %>
+
 <%= render "layouts/errors" %>
 
 <%= yield %>
